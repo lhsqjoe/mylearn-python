@@ -1,0 +1,100 @@
+学习方法:
+	1. 学习笔记  2.博客  3.github 保存练习代码
+
+
+1.python 解释器
+2.python 
+	速度问题
+	选择问题
+3.应用领域
+	全能
+	设计哲学：平衡发展、样样通、简洁明了
+
+4.环境：
+anaconda+pycharm
+python3.7
+
+jupyter notebook  #代码跟笔记写在一个文件里
+
+
+5.anaconda 
+
+exe 安装
+添加 PATH 变量  D:\Anaconda3\Scripts
+
+ conda --version
+
+ 更换国内源
+ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+
+ 第三方源：
+ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
+ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/
+ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/menpo/
+ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
+ # for legacy win-64
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/peterjc123/
+
+conda config --set show_channel_urls yes
+
+
+
+6.切换环境
+conda  create -n python34  python=3.4
+
+conda create -n learn
+activate learn
+conda env list #查看所有list
+conda remove --name test --all #卸载环境
+
+
+conda list #查看环境安装包
+
+conda install numpy
+
+
+
+7.jupyter 
+启动 jupyter notebook
+
+
+
+8.conda 
+conda upgrade --all
+
+如果想要导出当前环境的包信息可以用
+
+conda env export > environment.yaml
+
+将包信息存入yaml文件中.
+
+当需要重新创建一个相同的虚拟环境时可以用
+
+conda env create -f environment.yaml
+
+其实命令很简单对不对, 我把一些常用的在下面给出来, 相信自己多打两次就能记住
+
+activate // 切换到base环境
+
+activate learn // 切换到learn环境
+
+conda create -n learn python=3 // 创建一个名为learn的环境并指定python版本为3(的最新版本)
+
+conda env list // 列出conda管理的所有环境
+
+conda list // 列出当前环境的所有包
+
+conda install requests 安装requests包
+
+conda remove requests 卸载requets包
+
+conda env remove -n learn --all // 删除learn环境及下属所有包
+
+conda update requests 更新requests包
+
+conda env export > environment.yaml // 导出当前环境的包信息
+
+conda env create -f environment.yaml // 用配置文件创建新的虚拟环境
+

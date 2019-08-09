@@ -1,0 +1,4 @@
+2019-08-08 16:00:15,733 - __main__ - INFO - hello, guoweikuang
+2019-08-08 16:00:15,733 - __main__ - ERROR - error logging
+2019-08-08 16:00:15,734 - __main__ - WARNING - warning logging
+2019-08-08 16:00:15,734 - __main__ - CRITICAL - critical logging
