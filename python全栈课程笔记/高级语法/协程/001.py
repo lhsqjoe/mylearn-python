@@ -70,3 +70,15 @@ for i in kb:
     print(i)
 
 
+# 协程案例
+def simple_coroutine():
+    print('-> start')
+    x = yield
+    print('-> recived', x)
+
+
+# 主线程
+sc = simple_coroutine()
+
+next(sc)
+sc.send('zhe_xiao')
