@@ -30,4 +30,51 @@
 
  - python 网络包简介
     - python2.X：urllib，urllib2，urllib3，httplib，httplib2，requests
-    - python3.X: urllib，urllib3，httplib2，requests            
+    - python3.X: urllib，urllib3，httplib2，requests 
+
+# 2. urllib
+ - 包含模块
+    - urllib.request: 打开和读取urls
+    - urllib.error： 包含urllib.request 产生的常见错误，使用try 捕捉
+    - urllib.parse: 包含 即系 url的方法
+    - urllib.robotparse: 解析robots.txt 文件   
+ - 网页编码问题的解决
+    - chardet 可以自动检测页面文件的编码格式，但是可能有错误 原理是检测 html `<head>` 部分的 `<charset>` 标签
+    - 需要安装  activate mylearn  conda install chardet
+ - urlopen 返回 response  
+    - geturl
+    - info: 头信息
+    - getcode: 返回http code  
+
+ - urllib.data  
+    - 访问网络的方法
+        - get
+        - post 
+            - post 是把信息自动加密处理 
+        - request.Request 
+ 
+ - urllib.error
+    - URLError  原因
+        - 没网
+        - 服务器链接失败  
+    - HTTPError, 是  URLError 的子类
+ 
+ - UserAgent      
+    - UserAgent： 用户代理，简称UA, 属于heads的一部分,  服务器通过UA来判断 访问者身份
+    - 常见的UA值
+        - Android    
+        - firefox
+        - Google chrome
+            - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36
+        - ios   
+ - ProxyHandler 处理（代理服务器)
+    - 使用代理IP, 是爬虫的常用手段  
+    - 获取代理服务器的地址
+        - www.xicidaili.com
+        - www.goubanjia.com
+    - 代理用来隐藏真实访问中，代理也不允许频繁访问一个固定网站，所以，代理一定要很多很多
+    - 基本 使用步骤：
+        1. 设置代理地址
+        2. 创建proxyHandler
+        3. 创建Opener
+        4. 安装Opener      

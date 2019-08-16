@@ -1,0 +1,21 @@
+# cookie & session
+ - 存放位置不同
+ - cookie 不安全
+ - 单个cookie保存数据不超过4k, 很多浏览器限制一个站点最多保存20个
+ 
+ - 使用cookie 登录
+    - 直接把cookie 复制下来，然后手动放入请求头
+    - http 模块包含一些关于cookie 的模块，通过他们我们可以自动使用cookie
+        - CookieJar  
+            - 管理存储cookie, 向传出的http请求 添加cookie
+            - cookie 存储在内存中， CookieJar实例回收后cookie 将消失
+        - FileCookieJar
+        - MozillaCookieJar
+        - LwpCookieJar
+            - 创建与libwww-perl 标准兼容的Set-Cookie 格式的FileCookieJar实例
+        - 他们的关系是CookieJar -->FileCookieJar -->MozillaCookieJar -->LwpCookieJar
+    - 利用cookie 访问人人网
+        - 自动使用cookie 登录，大致流程是
+        - 打开登陆页面后自动通过用户名密码登录
+        - 自动提取反馈回来的cookie
+        - 利用提取的cookie 登录隐私页面        
