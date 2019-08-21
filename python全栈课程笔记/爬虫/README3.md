@@ -48,6 +48,36 @@
  - 放在 C:\Program Files (x86)\Google\Chrome\Application 目录下
  - 配置Path 环境变量
  - 额，配置完成后一直提示Path 找不到 chromedriver ,重启 pycharm 后可以了，不知道是啥原因
+
+## 验证码
+ - 分类
+    - 简单图片
+    - 极验 https://www.geetest.com/
+    - 12306
+    - 电话（国内少）
+    - Google 验证 
+ - 破解
+    - 通用方法
+        - 下载网页和验证码
+        - 手动输入验证号码
+    - 简单图片
+        - 使用图像识别软件或者文字识别软件 
+        - 使用第三方图像验证码破解网站      https://www.chaojiying.com/  
+    - 极验 https://www.geetest.com/    
+        - 破解麻烦
+        - 可以模拟鼠标等移动
+        - 一直在进化
+    - 12306 可以放弃了
+    - 电话 （语音识别） 
+
+## Tesseract (准确率相当的低。。。。)
+ - 机器视觉领域的基础软件
+ - OCR 光学文字识别
+ -  Tesseract 一个OCR库, google赞助   
+ - 安装 
+    - apt install  tesseract-ocr
+    - 使用
+    - pip install  tesseract       
  
 
      
