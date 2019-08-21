@@ -77,7 +77,7 @@
  - 安装 
     - apt install  tesseract-ocr
     - 使用
-    - pip install  tesseract       
+    - pip install  pytesseract       
  
 
      
