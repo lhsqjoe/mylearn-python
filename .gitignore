@@ -1,0 +1,4 @@
+.idea/*.xml
+Lib
+Scripts
+pyvenv.cfg
