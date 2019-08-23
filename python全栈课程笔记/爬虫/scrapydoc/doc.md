@@ -47,3 +47,7 @@ tutorial/
 
 ### Storing the scraped data
 `scrapy crawl quotes -o quotes.json`
+ - JSON Lines （）
+### Following links
+ - 爬取页面内的连接
+ - 示例：spidermylearn 项目的 my_spider3.py 
